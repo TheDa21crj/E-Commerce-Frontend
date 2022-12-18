@@ -1,0 +1,51 @@
+.titleNav {
+    text-decoration: none;
+    color: inherit;
+    font-family: MiaLove;
+}
+
+.titleNav h1 {
+    font-weight: 100;
+    letter-spacing: 0.12rem;
+}
+
+.headdiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    font-family: ManropeRegular;
+    box-shadow: 2px 2px 50px lightgrey;
+}
+
+.h1WelAdmin {
+    font-family: ManropeExtraBold;
+    letter-spacing: 0.12rem;
+    margin: 20px 0px 0px 20px;
+}
+
+.postPDiv {
+    font-family: ManropeRegular;
+    margin: 20px 0px 40px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.postPTag {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .postPDiv {
+        flex-direction: column;
+        text-align: center;
+    }
+    .postPDiv p {
+        margin: 10px 0px;
+    }
+}

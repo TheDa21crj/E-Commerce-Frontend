@@ -1,0 +1,214 @@
+.mdiv {
+  margin-bottom: 20px;
+}
+
+.MainPTag,
+.SubtotalPTag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: ManropeExtraBold;
+}
+
+.MainPTag {
+  margin: 30px 0px 30px 3%;
+}
+
+.SubtotalPTag {
+  margin: 30px 0px 15px 0px;
+}
+
+.totalPTag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: ManropeExtraBold;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+  border-color: #f56692;
+  padding: 10px 0px 0px 0px;
+}
+
+.RoWDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 3%;
+}
+
+.LeftDiv {
+  width: 60%;
+}
+
+.RightDiv {
+  width: 30%;
+}
+
+.LeftDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkShowDiv {
+  width: 100%;
+}
+
+.RightDiv {
+  font-family: ManropeRegular;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.MapMDiv {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s;
+}
+
+.MapMDiv:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 5px 5px 30px lightgrey;
+}
+
+.MapLeftDiv {
+  margin-right: 30px;
+}
+
+.MapLeftDiv,
+.MapLeftDiv img {
+  width: 200px;
+  height: 200px;
+}
+
+.MapLeftDiv img {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.MapRightDiv {
+  width: 100%;
+}
+
+.name {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0px;
+  font-family: ManropeExtraBold;
+  font-weight: bold;
+  border-style: solid;
+  padding-bottom: 4px;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgb(228, 228, 228);
+  width: 97%;
+}
+
+.Qunatity {
+  margin: 10px 0px;
+  font-family: ManropeRegular;
+}
+
+.MapRowDivBottom {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: ManropeRegular;
+}
+
+.DeliveryDiv {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-family: ManropeRegular;
+}
+
+.DeliveryDiv img {
+  width: 80px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.pTagYourOrder {
+  color: #067d62;
+}
+
+.DeleteDiv {
+  font-family: ManropeExtraBold;
+  background-color: #ff0000;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 0.3s;
+  width: 0px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.MapMDiv:hover > .DeleteDiv {
+  width: 200px;
+}
+
+.FalseDiv {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+#Link {
+  width: 100%;
+  display: flex;
+}
+
+.empty_cart {
+  margin-top: 20px;
+  width: 20%;
+  min-width: 150px;
+}
+
+.ProceedBuyDiv {
+  font-family: ManropeExtraBold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #f56692;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+  .RoWDiv {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+  }
+  .RightDiv,
+  .LeftDiv {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #Link {
+    flex-direction: column;
+  }
+  .MapLeftDiv {
+    width: 100%;
+    height: 300px;
+  }
+  .MapLeftDiv img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .Qunatity {
+    margin: 10px 0px 10px 10px;
+  }
+}

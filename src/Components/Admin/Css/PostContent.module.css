@@ -1,0 +1,128 @@
+.RightFormDiv,
+.LeftFormDiv {
+    flex-direction: column;
+}
+
+.RightFormDiv,
+.LeftFormDiv,
+.LeftFormDivRowDiv,
+.formTag {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.LeftFormDiv {
+    width: 60%;
+}
+
+.LeftFormDivRowDiv {
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.RightFormDiv {
+    width: 30%;
+}
+
+.ImpTagTextArea,
+.ImpTag {
+    font-family: ManropeRegular;
+    outline: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.ImpTagTextArea {
+    resize: none;
+}
+
+.ImpTag {
+    margin-top: 20px;
+    width: 40%;
+}
+
+.ImpTag::placeholder,
+.ImpTagTextArea::placeholder {
+    font-family: ManropeRegular;
+    text-transform: capitalize;
+}
+
+.ImpTag:hover,
+.ImpTagTextArea:hover {
+    border-color: #f56692;
+}
+
+.ImpTag:focus,
+.ImpTagTextArea:focus {
+    border-radius: 0px;
+    background-color: transparent;
+    border-color: transparent transparent #f34278 transparent;
+}
+
+.PostBtn {
+    margin: 30px 0px;
+    font-family: ManropeExtraBold;
+    background-color: #fff;
+    border: solid 1px lightgrey;
+    padding: 12px 32px;
+    border-radius: 5px;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    color: #f56692;
+    transition: all 0.3s;
+}
+
+.PostBtn:hover {
+    background-color: #f56692;
+    color: #fff;
+    letter-spacing: 0.12rem;
+}
+
+.showResAlert {
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    background-color: #f56692;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-family: ManropeRegular;
+}
+
+@media only screen and (max-width: 860px) {
+    .formTag {
+        margin-top: 20px;
+        flex-direction: column-reverse;
+    }
+    .LeftFormDiv,
+    .RightFormDiv {
+        width: 98%;
+    }
+    .ImpTagTextArea {
+        width: 90%;
+    }
+    .ImpTag:focus,
+    .ImpTagTextArea:focus {
+        border-radius: 10px;
+        background-color: transparent;
+        border-color: #f34278;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .LeftFormDivRowDiv {
+        width: 100%;
+        flex-direction: column;
+    }
+    .ImpTag {
+        width: 90%;
+    }
+    .LeftFormDivRowDiv {
+        margin: 0px 0px;
+    }
+}

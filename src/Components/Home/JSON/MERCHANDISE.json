@@ -1,0 +1,52 @@
+[{
+        "id": "1",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dcaee95fd106d72e106_HarryPotter.webp",
+        "name": "HarryPotter"
+    },
+    {
+        "id": "2",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca9b61427350a7c21f_StarWars.webp",
+        "name": "StarWars"
+    },
+    {
+        "id": "3",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dcaf67a054637bb1f27_DC.webp",
+        "name": "dc"
+    },
+    {
+        "id": "4",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca89f48ad676436d55_LooneyTunes.webp",
+        "name": "LooneyTunes"
+    },
+    {
+        "id": "5",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca19be04382cf52b0e_web-icon.webp",
+        "name": "Netflix"
+    },
+    {
+        "id": "6",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dca8c1f3e9337febd95_Disney.webp",
+        "name": "Disney"
+    },
+
+    {
+        "id": "7",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc919be046db7f52b06_Marvel_Logo.webp",
+        "name": "Marvel"
+    },
+    {
+        "id": "8",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db1dc91e10d0634e7b8bb7_friends.webp",
+        "name": "Friends"
+    },
+    {
+        "id": "9",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62ad4ae81253ba770756366d_himym.jpeg",
+        "name": "himym"
+    },
+    {
+        "id": "10",
+        "src": "https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/62db7b6322fdbe9274f21edc_wallpaperflare.com_wallpaper.jpg",
+        "name": "StrangerThings"
+    }
+]

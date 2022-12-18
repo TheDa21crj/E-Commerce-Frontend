@@ -1,0 +1,72 @@
+.mDiv {
+    position: relative;
+    width: 300px;
+    background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
+    backdrop-filter: blur(8px);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f56692;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.popularDiv {
+    height: 25px;
+}
+
+.Mostpopular {
+    padding: 8px 0px;
+    font-family: ManropeRegular;
+    background-color: #f56692;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+}
+
+.monthNum {
+    margin: 32px 0px 16px 0px;
+    font-family: ManropeExtraBold;
+}
+
+.monthPrice {
+    font-family: ManropeRegular;
+    font-weight: 300;
+    margin-bottom: 48px;
+}
+
+.price {
+    font-family: ManropeExtraBold;
+    margin-bottom: 20px;
+}
+
+.percentage {
+    font-family: ManropeRegular;
+    margin-bottom: 20px;
+    letter-spacing: 0.12rem;
+    font-weight: 500;
+    height: 12px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .mDiv {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .mDiv {
+        width: 230px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .mDiv {
+        width: 300px;
+    }
+}

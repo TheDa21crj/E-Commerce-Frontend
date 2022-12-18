@@ -1,0 +1,170 @@
+@font-face {
+  font-family: ManropeExtraBold;
+  src: url(./../../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: ManropeRegular;
+  src: url(./../../../Manrope/static/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: ManropeMedium;
+  src: url(./../../../Manrope/static/Manrope-Medium.ttf);
+}
+
+.h1 {
+  font-family: ManropeExtraBold;
+}
+
+.LeftDiv,
+.RightDiv {
+  width: 45%;
+}
+
+.conMDiv {
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.EmailDiv {
+  font-family: ManropeRegular;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.impEmail {
+  cursor: not-allowed;
+}
+
+#GeneralI {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: lightgrey;
+  padding: 0px 0px 5px 0px;
+}
+
+.impEmail,
+.PhoneNumberInp,
+.NameInp {
+  font-family: ManropeRegular;
+  outline: none;
+  margin-left: 10px;
+  padding: 7px 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.PhoneNumberInp {
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.FormDiv {
+  margin-top: 30px;
+}
+
+.FormDiv p {
+  font-family: ManropeMedium;
+  margin-bottom: 15px;
+}
+
+.LabelDivTag2,
+.LabelDivTag1 {
+  font-family: ManropeRegular;
+  margin-top: 20px;
+}
+
+.PhoneNumberLabel {
+  font-family: ManropeRegular;
+}
+
+.FormTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Gender {
+  margin: 20px 0px;
+}
+
+.GenderTDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: ManropeMedium;
+}
+
+.MaleLabel,
+.FemaleLabel,
+.OtherLabel {
+  margin-left: 5px;
+}
+
+.KeyboardBackspaceIcon {
+  display: none !important;
+}
+
+.flexDiv {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.fallTag {
+  width: 40%;
+  min-width: 100px;
+}
+
+.LadingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desTagBot {
+  font-family: ManropeRegular;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+  letter-spacing: 0.18rem;
+  color: #f56692;
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profileDiv {
+  padding: 5px 15px;
+  letter-spacing: 0.18px;
+  border: 0px solid #fff;
+  border-radius: 8px;
+  font-family: ManropeRegular;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f56692;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+  .FormTag {
+    flex-direction: column;
+  }
+  .LeftDiv,
+  .RightDiv {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .KeyboardBackspaceIcon {
+    display: inline-block !important;
+  }
+}

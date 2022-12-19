@@ -12,14 +12,17 @@ export default function Logout() {
 
   const logout = async () => {
     try {
-      const res = await fetch("/api/logout", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/logout`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       const data = await res.json();
 

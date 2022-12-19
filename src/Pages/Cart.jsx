@@ -29,15 +29,18 @@ export default function Cart() {
       return;
     } else {
       try {
-        const res = await fetch("/api/Wishlist/delete", {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            _id,
-          }),
-        });
+        const res = await fetch(
+          `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Wishlist/delete`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              _id,
+            }),
+          }
+        );
 
         var d = await res.json();
 
@@ -51,14 +54,17 @@ export default function Cart() {
   };
 
   const wishUpdate = async () => {
-    const res = await fetch("/api/Wishlist", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    });
+    const res = await fetch(
+      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Wishlist`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      }
+    );
     const data = await res.json();
     if (data.errors) {
       return;

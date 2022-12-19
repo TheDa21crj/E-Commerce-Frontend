@@ -11,14 +11,17 @@ export default function Myorders(props) {
 
   const seeOrders = async (e) => {
     try {
-      const res = await fetch("/api/Order", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Order`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       const data = await res.json();
       if (data.errors) {
         return;

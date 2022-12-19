@@ -43,14 +43,11 @@ export default function NavMobo() {
         </div>
         <div>
           <div className={NCss.PersonIcon}>
-            {/* <PersonIcon fontSize="large" /> */}
-            {/*  */}
             {imgSrc == "" ? (
               <PersonIcon fontSize="large" className={NCss.IconsClass0} />
             ) : (
               <img src={imgSrc} alt="" className={NCss.UserIcon} />
             )}
-            {/*  */}
             <div className={NCss.SoWDivPersonIcon}>
               <div className={NCss.arrow}></div>
               {toggle == "true" ? (

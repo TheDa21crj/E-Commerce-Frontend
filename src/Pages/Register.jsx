@@ -23,16 +23,19 @@ export default function Register() {
     const { email, password } = showUser;
     console.log(email, password);
 
-    const res = await fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
+    const res = await fetch(
+      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/register`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    );
 
     const r = await res.json();
     console.log(r);

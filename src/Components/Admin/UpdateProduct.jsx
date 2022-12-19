@@ -30,17 +30,20 @@ export default function UpdateProduct() {
       return;
     }
 
-    const res = await fetch("/api/admin/Products/Update", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        _id,
-        feild,
-        value,
-      }),
-    });
+    const res = await fetch(
+      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/admin/Products/Update`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          _id,
+          feild,
+          value,
+        }),
+      }
+    );
     const r = await res.json();
 
     setTimeout(() => {

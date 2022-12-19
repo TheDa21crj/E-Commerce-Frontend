@@ -21,14 +21,17 @@ export default function PostContent() {
 
   const AuthMiddleware = async () => {
     try {
-      const res = await fetch("/api/admin/post", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/admin/post`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       const data = await res.json();
       if (data.errors) {
@@ -86,24 +89,27 @@ export default function PostContent() {
       return;
     }
 
-    const res = await fetch("/api/admin/Products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        imageSrc,
-        des,
-        rating,
-        NumReview,
-        price,
-        gender,
-        tags,
-        stocks,
-        sold,
-      }),
-    });
+    const res = await fetch(
+      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/admin/Products`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          imageSrc,
+          des,
+          rating,
+          NumReview,
+          price,
+          gender,
+          tags,
+          stocks,
+          sold,
+        }),
+      }
+    );
     const r = await res.json();
 
     setTimeout(() => {

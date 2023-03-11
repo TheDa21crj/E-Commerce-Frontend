@@ -37,14 +37,17 @@ export default function ProductsDeatils() {
 
   const ProductData = async () => {
     try {
-      const res = await fetch(`/api/admin/Products/${id}`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_ROUTE}/api/admin/Products/${id}`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       const data = await res.json();
       if (data.errors) {
@@ -85,19 +88,22 @@ export default function ProductsDeatils() {
         let imgSrc = showimageSrc;
         let name = showname;
         let price = showprice;
-        const res = await fetch("/api/Wishlist/add", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id,
-            name,
-            imgSrc,
-            price,
-          }),
-        });
+        const res = await fetch(
+          `${import.meta.env.VITE_API_ROUTE}/api/Wishlist/add`,
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id,
+              name,
+              imgSrc,
+              price,
+            }),
+          }
+        );
         const data = await res.json();
         if (data === null) {
           return console.error("errors");
@@ -123,15 +129,18 @@ export default function ProductsDeatils() {
       return;
     } else {
       try {
-        const res = await fetch("/api/Wishlist/delete/product", {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id,
-          }),
-        });
+        const res = await fetch(
+          `${import.meta.env.VITE_API_ROUTE}/api/Wishlist/delete/product`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id,
+            }),
+          }
+        );
 
         await res.json();
 
@@ -145,16 +154,19 @@ export default function ProductsDeatils() {
 
   const CheckWish = async () => {
     try {
-      const res = await fetch("/api/Wishlist/check", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _id: id,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_ROUTE}/api/Wishlist/check`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            _id: id,
+          }),
+        }
+      );
       const data = await res.json();
       if (data) {
         setcheck(data.message);
@@ -175,21 +187,24 @@ export default function ProductsDeatils() {
 
   const addToCart = async () => {
     if (showSize !== "") {
-      const res = await fetch("/api/Shoping/add", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: id,
-          name: showname,
-          imgSrc: showimageSrc,
-          price: showprice,
-          qunatity: showSelect,
-          size: showSize,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_ROUTE}/api/Shoping/add`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: id,
+            name: showname,
+            imgSrc: showimageSrc,
+            price: showprice,
+            qunatity: showSelect,
+            size: showSize,
+          }),
+        }
+      );
       const data = await res.json();
       if (data.message === "same") {
         setMsg("Already Exists");
@@ -212,7 +227,7 @@ export default function ProductsDeatils() {
   };
 
   const wishUpdate = async () => {
-    const res = await fetch("/api/Wishlist", {
+    const res = await fetch(`${import.meta.env.VITE_API_ROUTE}/api/Wishlist`, {
       method: "GET",
       headers: {
         Accept: "application/json",

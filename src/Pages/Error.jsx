@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ErrCss from "./Css/Error.module.css";
-import img404 from "./../Img/new-404.png";
+import img404 from "./../assets/new-404.png";
 
 export default function Error() {
   useEffect(() => {

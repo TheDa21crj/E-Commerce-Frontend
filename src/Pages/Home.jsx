@@ -85,6 +85,7 @@ export default function Home() {
             <NewArrival />
             <CATEGORIES />
             <TopSelling />
+            {/* <COLLECTIONS /> */}
             <MERCHANDISE />
           </div>
         )}

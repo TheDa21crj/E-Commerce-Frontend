@@ -7,6 +7,9 @@ import Layout from "./Pages/Layout";
 // Pages
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
+import Tag from "./Pages/Tag";
+import Gender from "./Pages/Gender";
+import MerchandiseLink from "./Pages/MerchandiseLink";
 
 // Components
 import Nav from "./Components/Nav";
@@ -39,9 +42,9 @@ function App() {
             {/* <Route path="/admin/login" element={<AdminLogin />} /> */}
             {/* <Route path="/admin/post-content" element={<PostContent />} /> */}
             {/* <Route path="/ShopCart" element={<ShopCart />} /> */}
-            {/* <Route path="/categories/:gender/:tag" element={<Tag />} /> */}
-            {/* <Route path="/categories/:gender" element={<Gender />} /> */}
-            {/* <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} /> */}
+            <Route path="/categories/:gender/:tag" element={<Tag />} />
+            <Route path="/categories/:gender" element={<Gender />} />
+            <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
             {/* <Route path="/checkout-success" element={<CheckoutSuccess />} /> */}
             <Route path="*" element={<Error />} />
           </Routes>

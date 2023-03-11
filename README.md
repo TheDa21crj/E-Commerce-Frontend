@@ -35,3 +35,7 @@ npm run build
 This will create a production build of the application in the `dist` directory, which you can deploy to any static hosting platform.
 
 Thank you for using our e-commerce frontend repository. If you have any questions or issues, please feel free to open an issue or pull request.
+
+## Author
+
+- [@TheDa21crj](https://github.com/TheDa21crj)

@@ -19,17 +19,12 @@ export default function CheckoutSuccess() {
       return;
     } else {
       try {
-        const res = await fetch(
-          `${
-            import.meta.env.VITE_REACT_APP_BACKEND
-          }/api/Shoping/delete/product/all`,
-          {
-            method: "DELETE",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const res = await fetch("/api/Shoping/delete/product/all", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
 
         let r = await res.json();
 
@@ -46,23 +41,20 @@ export default function CheckoutSuccess() {
 
     for (var i = 0; i < sendID.length; i++) {
       try {
-        const res = await fetch(
-          `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Order/add`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              id: sendID[i].id,
-              price: sendID[i].price,
-              qunatity: sendID[i].qunatity,
-              size: sendID[i].size,
-              imageSrc: sendID[i].imageSrc,
-              name: sendID[i].name,
-            }),
-          }
-        );
+        const res = await fetch("/api/Order/add", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: sendID[i].id,
+            price: sendID[i].price,
+            qunatity: sendID[i].qunatity,
+            size: sendID[i].size,
+            imageSrc: sendID[i].imageSrc,
+            name: sendID[i].name,
+          }),
+        });
         let r = await res.json();
 
         console.log(r);

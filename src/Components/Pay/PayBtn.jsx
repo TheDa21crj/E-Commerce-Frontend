@@ -5,18 +5,15 @@ export default function PayBtn(props) {
   const handleClick = async () => {
     const dataItems = props.itemsData;
 
-    const res = await fetch(
-      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Stripe/checkout`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          dataItems,
-        }),
-      }
-    );
+    const res = await fetch("/api/Stripe/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        dataItems,
+      }),
+    });
 
     const data = await res.json();
 

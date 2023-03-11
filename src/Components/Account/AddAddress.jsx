@@ -22,24 +22,21 @@ export default function AddAddress(props) {
     const { name, address, pinCode, town, state, country, phoneNumber } =
       showUser;
 
-    const res = await fetch(
-      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Address/add`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          address,
-          pinCode,
-          town,
-          state,
-          country,
-          phoneNumber,
-        }),
-      }
-    );
+    const res = await fetch("/api/Address/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        address,
+        pinCode,
+        town,
+        state,
+        country,
+        phoneNumber,
+      }),
+    });
 
     const r = await res.json();
     if (r && r === "Address Added") {

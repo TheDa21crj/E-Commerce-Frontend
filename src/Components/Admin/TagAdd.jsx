@@ -30,19 +30,16 @@ export default function TagAdd() {
       return;
     }
 
-    const res = await fetch(
-      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/admin/Products/UpdateTag`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _id,
-          name,
-        }),
-      }
-    );
+    const res = await fetch("/api/admin/Products/UpdateTag", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _id,
+        name,
+      }),
+    });
     const r = await res.json();
 
     setTimeout(() => {

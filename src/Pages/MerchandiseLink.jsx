@@ -11,20 +11,15 @@ export default function MerchandiseLink() {
 
   const AuthMiddleware = async () => {
     try {
-      const res = await fetch(
-        `${
-          import.meta.env.VITE_REACT_APP_BACKEND
-        }/api/admin/Products/MERCHANDISE`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            tag: link,
-          }),
-        }
-      );
+      const res = await fetch("/api/admin/Products/MERCHANDISE", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          tag: link,
+        }),
+      });
 
       const data = await res.json();
       if (data.errors) {

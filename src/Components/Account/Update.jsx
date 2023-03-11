@@ -37,23 +37,20 @@ export default function Update(props) {
       if (PhoneNumber.length >= 10 && PhoneNumber.length <= 12) {
         console.log(showUser);
 
-        const res = await fetch(
-          `${import.meta.env.VITE_REACT_APP_BACKEND}/api/update`,
-          {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              _id,
-              firstName,
-              LastName,
-              gender,
-              PhoneNumber,
-              dob,
-            }),
-          }
-        );
+        const res = await fetch("/api/update", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            _id,
+            firstName,
+            LastName,
+            gender,
+            PhoneNumber,
+            dob,
+          }),
+        });
 
         const r = await res.json();
         console.log(r);
@@ -79,17 +76,14 @@ export default function Update(props) {
 
   const AuthMiddleware = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/account`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("/api/account", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
 
       const data = await res.json();
       if (data.errors) {

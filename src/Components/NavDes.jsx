@@ -24,17 +24,14 @@ const Nav = (props) => {
 
   const AuthMiddleware = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/account`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("/api/account", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
 
       const data = await res.json();
       if (data.errors) {
@@ -64,17 +61,14 @@ const Nav = (props) => {
 
   const CartCheck = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Wishlist`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("/api/Wishlist", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
       const data = await res.json();
       if (data.errors) {
         return;

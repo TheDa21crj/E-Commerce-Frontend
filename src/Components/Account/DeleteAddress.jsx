@@ -8,18 +8,15 @@ export default function DeleteAddress(props) {
 
   const deleteAddressFun = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Address/delete`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            _id: props.DeleteID,
-          }),
-        }
-      );
+      const res = await fetch("/api/Address/delete", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          _id: props.DeleteID,
+        }),
+      });
       const data = await res.json();
       if (data.errors) {
         return;

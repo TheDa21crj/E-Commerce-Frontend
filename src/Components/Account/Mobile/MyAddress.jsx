@@ -29,17 +29,14 @@ export default function MyAddress(props) {
 
   const seeAddress = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Address`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("/api/Address", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
       const data = await res.json();
       if (data.errors) {
         return;

@@ -11,19 +11,16 @@ export default function Gender() {
 
   const DataGet = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/admin/Products/Gender`,
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            gender,
-          }),
-        }
-      );
+      const res = await fetch("/api/admin/Products/Gender", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          gender,
+        }),
+      });
 
       const data = await res.json();
       setGender(data);

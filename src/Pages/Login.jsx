@@ -20,7 +20,9 @@ const Login = (props) => {
 
   const check = async () => {
     if (_id !== "") {
-      return navigate(`${import.meta.env.VITE_REACT_APP_BACKEND}/my-account`);
+      return navigate(
+        "/my-account"
+      );
     }
   };
 
@@ -41,19 +43,16 @@ const Login = (props) => {
   const PostData = async () => {
     const { email, password } = showUser;
 
-    const res = await fetch(
-      `${import.meta.env.VITE_REACT_APP_BACKEND}/api/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      }
-    );
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
 
     const r = await res.json();
 

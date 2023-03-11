@@ -20,17 +20,14 @@ export default function ShopCart() {
 
   const seeList = async () => {
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_REACT_APP_BACKEND}/api/Shoping`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("/api/Shoping", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
       const data = await res.json();
       if (data.errors) {
         setload(false);
@@ -65,20 +62,15 @@ export default function ShopCart() {
       return;
     } else {
       try {
-        const res = await fetch(
-          `${
-            import.meta.env.VITE_REACT_APP_BACKEND
-          }/api/Shoping/delete/product`,
-          {
-            method: "DELETE",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              id,
-            }),
-          }
-        );
+        const res = await fetch("/api/Shoping/delete/product", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id,
+          }),
+        });
 
         await res.json();
 

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+.mDiv {
+    margin: 20px 0px;
+}
+
+.H1Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.h1 {
+    position: relative;
+    text-align: center;
+    font-family: ManropeExtraBold;
+    line-height: 1.24;
+    margin-bottom: 30px;
+}
+
+.h1::after {
+    content: "";
+    position: absolute;
+    background-color: #f56692;
+    height: 3px;
+    width: 10%;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.3s;
+}
+
+.h1:hover:after {
+    width: 100%;
+}
+
+.slideDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.Hslide {
+    width: 95%;
+}
+
+.ImgHeader {
+    border-radius: 0px 10px 0px 10px;
+    width: 98%;
+    height: 380px;
+}
+
+.SlidDiv {
+    border-radius: 0px 10px 0px 10px;
+    position: relative;
+    margin-left: 1px;
+    transition: all 0.3s;
+}
+
+.SlidDiv:hover>.ImgDivBtnDiv {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ImgDivBtnDiv {
+    border-radius: 0px 10px 0px 10px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.ImgPTag {
+    font-family: ManropeExtraBold;
+    color: white;
+    font-size: 1.5vw;
+    text-shadow: 5px 5px 50px white;
+    line-height: 1.24;
+    margin-bottom: 20px;
+    letter-spacing: 0.18rem;
+}
+
+.ShowNowATag {
+    font-family: ManropeExtraBold;
+    color: #f56692;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f56692;
+    transition: all 0.5s;
+}
+
+.ShowNowATag:hover {
+    color: white;
+    box-shadow: inset -5em 0 0 0 #f56692, inset 5em 0 0 0 #f56692;
+}
+
+@media only screen and (max-width: 800px) {
+    .ImgPTag {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ImgPTag {
+        text-align: center;
+        font-size: 16px;
+    }
+}

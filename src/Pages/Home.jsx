@@ -1,9 +1,25 @@
 import React, { useEffect } from "react";
 
+import Header from "../Components/Home/Header";
+import NewArrival from "../Components/Home/NewArrival";
+import TopSelling from "../Components/Home/TopSelling";
+import MERCHANDISE from "../Components/Home/MERCHANDISE";
+import CATEGORIES from "./../Components/Home/CATEGORIES";
+import COLLECTIONS from "./../Components/Home/COLLECTIONS";
+import Loading from "./Loading";
+
+// redux
+import { useSelector } from "react-redux";
+import { seeload } from "../redux/loading";
+import { addselling } from "../redux/selling";
+import { useDispatch } from "react-redux";
+
 export default function Home() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     // document.title = "Online Shopping for Men & Women: The Da";
-    // dispatch(seeload({ start: "false" }));
+    dispatch(seeload({ start: "false" }));
     DataGet();
   }, []);
 
@@ -57,5 +73,25 @@ export default function Home() {
       console.log(error);
     }
   };
-  return <div>Home</div>;
+
+  const load = useSelector((state) => state.selling.loading);
+
+  return (
+    <div>
+      <div className="homeBodymDiv">
+        {load === "true" ? (
+          <Loading />
+        ) : (
+          <div>
+            <Header />
+            <NewArrival />
+            <CATEGORIES />
+            <TopSelling />
+            {/* <COLLECTIONS /> */}
+            <MERCHANDISE />
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }

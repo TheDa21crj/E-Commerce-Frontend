@@ -43,13 +43,13 @@ export default function Home() {
         return console.log("error");
       }
       if (dataNA && dataTS) {
-        // dispatch(
-        //   addselling({
-        //     topselling: dataTS,
-        //     newArrival: dataNA,
-        //     loading: "false",
-        //   })
-        // );
+        dispatch(
+          addselling({
+            topselling: dataTS,
+            newArrival: dataNA,
+            loading: "false",
+          })
+        );
         console.log(dataNA);
         console.log(dataTS);
       }

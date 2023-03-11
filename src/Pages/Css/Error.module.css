@@ -1,0 +1,17 @@
+.mDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 91.2vh;
+}
+
+.Oops {
+    margin-top: -50px;
+    font-family: ManropeExtraBold;
+}
+
+.Therequested {
+    margin-top: 20px;
+    font-family: ManropeRegular;
+}

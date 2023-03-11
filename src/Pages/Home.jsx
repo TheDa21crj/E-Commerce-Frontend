@@ -26,7 +26,7 @@ export default function Home() {
   const DataGet = async () => {
     try {
       const res = await fetch(
-        "https://coral-app-ogkbu.ondigitalocean.app/api/admin/Products/NewArival",
+        `${import.meta.env.VITE_API_ROUTE}/api/admin/Products/NewArival`,
         {
           method: "GET",
           headers: {
@@ -43,7 +43,7 @@ export default function Home() {
       }
 
       const res0 = await fetch(
-        "https://coral-app-ogkbu.ondigitalocean.app/api/admin/Products/TopSelling",
+        `${import.meta.env.VITE_API_ROUTE}/api/admin/Products/NewArival`,
         {
           method: "GET",
           headers: {

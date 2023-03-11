@@ -10,6 +10,7 @@ import Error from "./Pages/Error";
 import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink";
+import ProductsDeatils from "./Pages/ProductsDeatils";
 
 // Components
 import Nav from "./Components/Nav";

@@ -1,0 +1,86 @@
+[{
+        "id": "1",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles2_SclW5qN.jpg?format=webp&w=400&dpr=1.5",
+        "type": "nor400",
+        "gender": "male",
+        "link": "tshirt"
+    },
+    {
+        "id": "2",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/shirts-web_xdLFYjy.jpg?format=webp&w=400&dpr=1.5",
+        "type": "nor400",
+        "gender": "male",
+        "link": "shirt"
+    },
+    {
+        "id": "3",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/dresses--name-tiles.jpg?format=webp&w=400&dpr=1.5",
+        "type": "nor400",
+        "gender": "female",
+        "link": "dress"
+    },
+    {
+        "id": "4",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womensacivewearhorizontal-tile.jpg?format=webp&w=610&dpr=1.5",
+        "type": "nor600",
+        "gender": "female",
+        "link": "activewear"
+    },
+    {
+        "id": "5",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles_2_Ub3ndMj.jpg?format=webp&w=300&dpr=1.5",
+        "type": "nor300",
+        "gender": "male",
+        "link": "polos"
+    },
+    {
+        "id": "6",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles1234_1.jpg?format=webp&w=300&dpr=1.5",
+        "type": "nor300",
+        "gender": "female",
+        "link": "tshirt"
+    },
+
+    {
+        "id": "7",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/cordsets-women-web.jpg?format=webp&w=300&dpr=1.5",
+        "type": "nor300",
+        "gender": "female",
+        "link": "co-ord-sets"
+    },
+    {
+        "id": "8",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/name-tiles1_EkpBXJ6.jpg?format=webp&w=300&dpr=1.5",
+        "type": "nor300",
+        "gender": "male",
+        "link": "tshirt"
+    },
+    {
+        "id": "9",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womenspjshorizontal-tile.jpg?format=webp&w=610&dpr=1.5",
+        "type": "nor600",
+        "gender": "female",
+        "link": "NightWear"
+    },
+    {
+        "id": "10",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/dropcut-web_hyiMbEb.jpg?format=webp&w=300&dpr=1.5",
+        "type": "nor400",
+        "gender": "male",
+        "link": "tshirt"
+    },
+    {
+        "id": "11",
+        "src": "https://g3fashion.com/blog/wp-content/uploads/2021/06/white-indian-suit-e1624093293937.jpg",
+        "type": "nor400",
+        "gender": "female",
+        "link": "ethnic"
+    },
+    {
+        "id": "12",
+        "src": "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/womensjoggers-web.jpg?format=webp&w=300&dpr=1.5",
+        "type": "nor400",
+        "gender": "female",
+        "link": "joggers"
+    }
+]

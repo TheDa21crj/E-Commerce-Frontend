@@ -11,17 +11,20 @@ export default function Tag() {
 
   const DataGet = async () => {
     try {
-      const res = await fetch("/api/admin/Products/Tag", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          gender,
-          tag,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_ROUTE}/api/admin/Products/Tag`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            gender,
+            tag,
+          }),
+        }
+      );
 
       const data = await res.json();
       setGender(data);

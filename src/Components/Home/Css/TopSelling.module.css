@@ -1,0 +1,102 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../../Manrope/static/Manrope-Regular.ttf);
+}
+
+.mDiv {
+    margin-top: 20px;
+}
+
+.H1Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.h1 {
+    position: relative;
+    text-align: center;
+    font-family: ManropeExtraBold;
+    line-height: 1.24;
+    margin-bottom: 30px;
+}
+
+.h1::after {
+    content: "";
+    position: absolute;
+    background-color: #f56692;
+    height: 3px;
+    width: 10%;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.3s;
+}
+
+.h1:hover:after {
+    width: 100%;
+}
+
+.ImgSrc {
+    border-radius: 0px 10px 0px 10px;
+    width: 98%;
+    height: 380px;
+}
+
+.Hslide {
+    width: 95%;
+}
+
+.slideDiv {
+    display: flex;
+    justify-content: center;
+    margin-left: 1px;
+}
+
+.DetailsDiv {
+    margin: 7px 0px 0px 15px;
+}
+
+.DetailsDiv:hover>.Name,
+.DetailsDiv:hover>.Rating,
+.DetailsDiv:hover>.price {
+    color: black;
+}
+
+.Name {
+    white-space: nowrap;
+    width: 98%;
+    margin-bottom: 7px;
+    color: #58595b;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 0px 0px 1px 0px;
+    font-weight: bold;
+    font-family: ManropeExtraBold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s;
+}
+
+.Rating {
+    font-family: ManropeRegular;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    color: grey;
+}
+
+.StarIcon {
+    color: gold;
+    margin-right: 5px;
+}
+
+.price {
+    font-family: ManropeRegular;
+    color: grey;
+}

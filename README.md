@@ -1,6 +1,6 @@
 # E-Commerce-Frontend
 
-Welcome to the e-commerce frontend repository made with Vite, React, Redux, and Material UI for icons. This frontend communicates with the backend API hosted at `https://coral-app-ogkbu.ondigitalocean.app/.` The frontend is hosted on Vercel, a cloud platform for static sites and serverless functions.
+Welcome to the e-commerce frontend repository made with Vite, React, Redux, and Material UI for icons. This frontend communicates with the backend API hosted at `https://coral-app-ogkbu.ondigitalocean.app/`. The frontend is hosted on Vercel, a cloud platform for static sites and serverless functions.
 
 To get started, make sure you have the latest version of Node.js installed on your system. Then, clone this repository and run the following command to install the required dependencies:
 

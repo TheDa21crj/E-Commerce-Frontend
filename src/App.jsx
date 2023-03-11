@@ -16,6 +16,9 @@ import Footer from "./Components/Footer";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
+// Analytics
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   return (
     <BrowserRouter>

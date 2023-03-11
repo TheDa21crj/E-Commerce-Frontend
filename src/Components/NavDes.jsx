@@ -13,9 +13,9 @@ import { toggleN } from "./../redux/toggleNav";
 import { adduser } from "./../redux/user";
 import { useDispatch } from "react-redux";
 
-import ImgNav1 from "./../Img/men.jpg";
-import ImgNav2 from "./../Img/women.jpg";
-import ImgNav3 from "./../Img/kids.jpg";
+import ImgNav1 from "./../assets/men.jpg";
+import ImgNav2 from "./../assets/women.jpg";
+import ImgNav3 from "./../assets/kids.jpg";
 
 const Nav = (props) => {
   const [showimg, setimg] = useState("");

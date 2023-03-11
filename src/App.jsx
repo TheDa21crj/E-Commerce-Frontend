@@ -10,7 +10,7 @@ import Error from "./Pages/Error";
 import Tag from "./Pages/Tag";
 import Gender from "./Pages/Gender";
 import MerchandiseLink from "./Pages/MerchandiseLink";
-import ProductsDeatils from "./Pages/ProductsDeatils";
+// import ProductsDeatils from "./Pages/ProductsDeatils";
 
 // Components
 import Nav from "./Components/Nav";
@@ -33,7 +33,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               {/* <Route path="/Membership" element={<Membership />} /> */}
-              <Route path="/products/:id" element={<ProductsDeatils />} />
+              {/* <Route path="/products/:id" element={<ProductsDeatils />} /> */}
               {/* <Route path="/wishlist" element={<Cart />} /> */}
               {/* <Route path="/login" element={<Login />} /> */}
               {/* <Route path="/register" element={<Register />} /> */}

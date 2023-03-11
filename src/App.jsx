@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       {/* <Provider store={store}> */}
       <Layout>
-        {/* <Nav /> */}
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/Membership" element={<Membership />} /> */}
@@ -30,7 +30,7 @@ function App() {
           {/* <Route path="/checkout-success" element={<CheckoutSuccess />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Layout>
       {/* </Provider> */}
     </BrowserRouter>

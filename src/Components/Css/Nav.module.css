@@ -1,0 +1,231 @@
+@font-face {
+    font-family: ManropeExtraBold;
+    src: url(./../../Manrope/static/Manrope-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url(./../../Manrope/static/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: MiaLove;
+    src: url(./../../MiaLove/FontsFree-Net-Mia-Love.ttf);
+}
+
+.TitleH1 {
+    font-family: MiaLove;
+    font-weight: 100;
+    letter-spacing: 0.12rem;
+}
+
+.underNav {
+    width: 100%;
+    height: 53px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #fff;
+}
+
+.NavmDiv {
+    position: fixed;
+    width: 100%;
+    max-width: 1700px;
+    height: 53px;
+    background: linear-gradient( 117.76deg, rgba(255, 255, 255, 0.7) -7.21%, rgba(255, 255, 255, 0.5) 118.08%);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+}
+
+.NavmDiv,
+.TitleandSubtileDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.TitleandSubtileDiv {
+    width: 80%;
+}
+
+.LinkTag {
+    font-family: ManropeExtraBold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.ulDiv {
+    width: 80%;
+}
+
+#Dd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#Dd li {
+    list-style-type: none;
+    font-family: ManropeRegular;
+    cursor: pointer;
+}
+
+.IconsDiv {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.IconsClass0,
+.IconsClass1,
+.IconsClass2 {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.IconsClass1:hover,
+.IconsClass0:hover {
+    color: #f56692;
+}
+
+.dropDownDiv {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 2%;
+    background-color: #fff;
+    top: 50px;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    transform: translateX(-110%);
+    z-index: 2;
+    transition: all 0.7s;
+}
+
+#Dd li:hover>.dropDownDiv {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.UserDiv {
+    z-index: 1;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.UserDiv:hover>.HoverDiv {
+    transform: translate(0px, 0px);
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.HoverDiv {
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.UserHoverDiv {
+    font-family: ManropeRegular;
+    font-size: 0.8rem;
+    position: absolute;
+    z-index: 3;
+    left: -100%;
+    background-color: #f56692;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 10px 10px 70px lightgrey;
+    padding: 0.5rem 1rem;
+}
+
+.arrow {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5px;
+    left: 12px;
+    background-color: #f56692;
+    transform: rotate(45deg);
+}
+
+.NavListPTag {
+    position: relative;
+    padding: 12px 0px;
+}
+
+.NavListPTag::after {
+    content: "";
+    position: absolute;
+    background-color: #f56692;
+    height: 2px;
+    width: 0%;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.3s;
+}
+
+.wishDiv {
+    position: relative;
+}
+
+.NavListPTag:hover:after {
+    width: 100%;
+}
+
+.ValueDiv {
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ValueDiv p {
+    margin-top: -5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: ManropeRegular;
+}
+
+.wishDiv:hover {
+    color: #f56692;
+    transition: all 0.3s;
+}
+
+.UserIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.underNav2 {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .NavmDiv {
+        display: none;
+    }
+    .underNav2 {
+        display: block;
+        width: 100%;
+        height: 53px;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: #fff;
+    }
+    .underNav {
+        display: none;
+    }
+}

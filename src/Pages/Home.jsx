@@ -66,8 +66,6 @@ export default function Home() {
             loading: "false",
           })
         );
-        console.log(dataNA);
-        console.log(dataTS);
       }
     } catch (error) {
       console.log(error);

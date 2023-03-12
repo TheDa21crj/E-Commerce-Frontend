@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
+
+// Css
 import ErrCss from "./Css/Error.module.css";
+
+// Img
 import img404 from "./../assets/new-404.png";
 
 export default function Error() {

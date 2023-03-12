@@ -1,5 +1,5 @@
 import React from "react";
-import img from "./../../Img/clothes.jpg";
+import img from "./../../assets/clothes.jpg";
 import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

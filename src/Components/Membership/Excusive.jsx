@@ -2,10 +2,10 @@ import React from "react";
 import Ecss from "./CSS/Excusive.module.css";
 import Benifits from "./Benifits";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import svg1 from "./../../Img/Membership/discount.svg";
-import svg2 from "./../../Img/Membership/early.svg";
-import svg3 from "./../../Img/Membership/shipping.svg";
-import svg4 from "./../../Img/Membership/delivery.svg";
+import svg1 from "./../../assets/Membership/discount.svg";
+import svg2 from "./../../assets/Membership/early.svg";
+import svg3 from "./../../assets/Membership/shipping.svg";
+import svg4 from "./../../assets/Membership/delivery.svg";
 
 export default function Excusive() {
   return (

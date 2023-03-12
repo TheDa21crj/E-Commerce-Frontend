@@ -1,16 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { Suspense } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
 
-// Pages
+// Loading
+import Loading from "./Pages/Loading";
+
+// Pages || Lazy Loading
 import Home from "./Pages/Home";
-import Error from "./Pages/Error";
-import Tag from "./Pages/Tag";
-import Gender from "./Pages/Gender";
-import MerchandiseLink from "./Pages/MerchandiseLink";
-import ProductsDeatils from "./Pages/ProductsDeatils";
+const Error = React.lazy(() => import("./Pages/Error"));
+const Tag = React.lazy(() => import("./Pages/Tag"));
+const Gender = React.lazy(() => import("./Pages/Gender"));
+const MerchandiseLink = React.lazy(() => import("./Pages/MerchandiseLink"));
+const ProductsDeatils = React.lazy(() => import("./Pages/ProductsDeatils"));
 
 // Components
 import Nav from "./Components/Nav";
@@ -32,8 +35,16 @@ function App() {
             <Nav />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route
+                path="/products/:id"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <ProductsDeatils />
+                  </Suspense>
+                }
+              />
               {/* <Route path="/Membership" element={<Membership />} /> */}
-              <Route path="/products/:id" element={<ProductsDeatils />} />
+              {/* <Route path="/products/:id" element={<ProductsDeatils />} /> */}
               {/* <Route path="/wishlist" element={<Cart />} /> */}
               {/* <Route path="/login" element={<Login />} /> */}
               {/* <Route path="/register" element={<Register />} /> */}

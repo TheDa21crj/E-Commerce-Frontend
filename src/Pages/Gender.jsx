@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
+// Loading
+import Loading from "./Loading";
+
 // Css
 import GenCss from "./Css/Gender.module.css";
 import TSCss from "./../Components/Home/Css/TopSelling.module.css";

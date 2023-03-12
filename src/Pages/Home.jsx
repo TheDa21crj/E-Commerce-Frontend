@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 
+// Loading
+import Loading from "./Loading";
+
+// Components
 import Header from "../Components/Home/Header";
 import NewArrival from "../Components/Home/NewArrival";
 import TopSelling from "../Components/Home/TopSelling";
 import MERCHANDISE from "../Components/Home/MERCHANDISE";
 import CATEGORIES from "./../Components/Home/CATEGORIES";
 import COLLECTIONS from "./../Components/Home/COLLECTIONS";
-import Loading from "./Loading";
 
 // redux
 import { useSelector } from "react-redux";
@@ -18,7 +21,6 @@ export default function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // document.title = "Online Shopping for Men & Women: The Da";
     dispatch(seeload({ start: "false" }));
     DataGet();
   }, []);

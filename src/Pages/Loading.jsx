@@ -1,4 +1,6 @@
 import React from "react";
+
+// Css
 import LoadCss from "./Css/Loading.module.css";
 
 export default function Loading() {

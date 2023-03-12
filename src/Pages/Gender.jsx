@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import TSCss from "./../Components/Home/Css/TopSelling.module.css";
-import StarIcon from "@mui/icons-material/Star";
+
+// Css
 import GenCss from "./Css/Gender.module.css";
+import TSCss from "./../Components/Home/Css/TopSelling.module.css";
+
+// Icons
+import StarIcon from "@mui/icons-material/Star";
 
 export default function Gender() {
   const [showGender, setGender] = useState();

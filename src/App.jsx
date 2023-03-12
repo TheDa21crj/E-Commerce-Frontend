@@ -44,6 +44,30 @@ function App() {
                 }
               />
               {/* <Route path="/Membership" element={<Membership />} /> */}
+              <Route
+                path="/MERCHANDISE/:link"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <MerchandiseLink />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/categories/:gender/:tag"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <Tag />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/categories/:gender"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <Gender />
+                  </Suspense>
+                }
+              />
               {/* <Route path="/products/:id" element={<ProductsDeatils />} /> */}
               {/* <Route path="/wishlist" element={<Cart />} /> */}
               {/* <Route path="/login" element={<Login />} /> */}
@@ -55,11 +79,15 @@ function App() {
               {/* <Route path="/admin/login" element={<AdminLogin />} /> */}
               {/* <Route path="/admin/post-content" element={<PostContent />} /> */}
               {/* <Route path="/ShopCart" element={<ShopCart />} /> */}
-              <Route path="/categories/:gender/:tag" element={<Tag />} />
-              <Route path="/categories/:gender" element={<Gender />} />
-              <Route path="/MERCHANDISE/:link" element={<MerchandiseLink />} />
               {/* <Route path="/checkout-success" element={<CheckoutSuccess />} /> */}
-              <Route path="*" element={<Error />} />
+              <Route
+                path="*"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <Error />
+                  </Suspense>
+                }
+              />
             </Routes>
             <Footer />
           </Layout>

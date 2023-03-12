@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+// Css
 import PCss from "./CSS/PriceCards.module.css";
 
 export default function PriceCards(props) {

@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
-import "./Css/Member.css";
+
+// Components
 import HeaderM from "../Components/Membership/HeaderM";
 import Excusive from "../Components/Membership/Excusive";
 import Member from "../Components/Membership/Member";
 import Testimonial from "../Components/Membership/Testimonial";
+
+// Css
+import "./Css/Member.css";
 
 export default function Membership() {
   useEffect(() => {

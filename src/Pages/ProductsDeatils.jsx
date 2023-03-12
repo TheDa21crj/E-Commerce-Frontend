@@ -7,6 +7,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./../Components/Product/CSS/ProductC.css";
 import Alert from "./../Components/Account/Alert";
 import Loading from "./Loading";
+
 // redux
 import { useSelector } from "react-redux";
 import { addWish } from "../redux/userSlice";

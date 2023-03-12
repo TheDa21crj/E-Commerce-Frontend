@@ -1,0 +1,85 @@
+.mDiv {
+    margin: 40px 0px;
+}
+
+.titlemDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 40px 0px;
+}
+
+.ExclusiveMemberBenefits {
+    font-size: 1.5rem;
+    font-family: ManropeExtraBold;
+    margin-right: 10px;
+}
+
+.EmojiEventsIcon {
+    color: #f56692;
+}
+
+.titlemDivChild {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7px;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: #f56692;
+}
+
+.BenifitsRowDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.BenifitsDiv {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.BenifitsTopDiv,
+.BenifitsBottomDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BenifitsBottomDiv {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .BenifitsDiv {
+        width: 95%;
+    }
+    .BenifitsTopDiv,
+    .BenifitsBottomDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titlemDiv {
+        margin: 0px;
+    }
+    .BenifitsBottomDiv {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .BenifitsDiv {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .ExclusiveMemberBenefits {
+        font-size: 1.2rem;
+    }
+}

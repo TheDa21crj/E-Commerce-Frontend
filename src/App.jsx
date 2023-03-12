@@ -9,9 +9,10 @@ import Loading from "./Pages/Loading";
 
 // Pages || Lazy Loading
 import Home from "./Pages/Home";
-const Error = React.lazy(() => import("./Pages/Error"));
 const Tag = React.lazy(() => import("./Pages/Tag"));
+const Error = React.lazy(() => import("./Pages/Error"));
 const Gender = React.lazy(() => import("./Pages/Gender"));
+const Membership = React.lazy(() => import("./Pages/Membership"));
 const MerchandiseLink = React.lazy(() => import("./Pages/MerchandiseLink"));
 const ProductsDeatils = React.lazy(() => import("./Pages/ProductsDeatils"));
 
@@ -43,7 +44,14 @@ function App() {
                   </Suspense>
                 }
               />
-              {/* <Route path="/Membership" element={<Membership />} /> */}
+              <Route
+                path="/Membership"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <Membership />
+                  </Suspense>
+                }
+              />
               <Route
                 path="/MERCHANDISE/:link"
                 element={

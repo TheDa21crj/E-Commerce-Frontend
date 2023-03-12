@@ -1,0 +1,84 @@
+.AddressRowDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mapPArent {
+  width: 100%;
+}
+
+.mapPArentDiv {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 150px));
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.AddAddressmDiv {
+  border-style: dashed;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #f56692;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.AddAddressmDiv p {
+  font-family: ManropeRegular;
+  margin-top: 20px;
+}
+
+.AmDiv {
+  margin-bottom: 20px;
+  padding: 7px;
+  font-family: ManropeRegular;
+  text-transform: capitalize;
+  width: 270px;
+  height: 220px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #f56692;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editHoverDiv {
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.editHoverEdit,
+.editHoverDelete {
+  color: grey;
+  cursor: pointer;
+}
+
+.editHoverEdit:hover {
+  color: #f56692;
+}
+
+.editHoverDelete:hover {
+  color: red;
+}
+
+@media only screen and (max-width: 1040px) {
+  .AddAddressmDiv {
+    width: 250px;
+  }
+}

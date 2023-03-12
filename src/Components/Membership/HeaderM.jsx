@@ -1,9 +1,13 @@
 import React from "react";
-import img from "./../../assets/clothes.jpg";
 import Sliders from "react-slick";
+
+// Css
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import HMCss from "./CSS/Header.module.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Img
+import img from "./../../assets/clothes.jpg";
 
 export default function HeaderM() {
   var settingM = {

@@ -10,6 +10,7 @@ import StarIcon from "@mui/icons-material/Star";
 
 export default function Tag() {
   const [showGender, setGender] = useState();
+  const [loading, setLoading] = useState(false);
 
   const { tag, gender } = useParams();
 

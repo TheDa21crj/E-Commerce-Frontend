@@ -1,7 +1,13 @@
 import React from "react";
 import Ecss from "./CSS/Excusive.module.css";
+
+// Components
 import Benifits from "./Benifits";
+
+// Icons
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+
+// Img
 import svg1 from "./../../assets/Membership/discount.svg";
 import svg2 from "./../../assets/Membership/early.svg";
 import svg3 from "./../../assets/Membership/shipping.svg";

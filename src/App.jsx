@@ -31,6 +31,41 @@ import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <>
+      <Helmet>
+        <title>Online Shopping for Men & Women: The Da</title>
+        <meta
+          name="description"
+          content="Online Shopping for Men & Women: The Da"
+        />
+        <meta
+          property="og:title"
+          content="Online Shopping for Men & Women: The Da"
+        />
+        <meta
+          property="og:url"
+          content="https://e-commerce-frontend-nu.vercel.app/"
+        />
+        <meta
+          property="og:description"
+          content="https://e-commerce-frontend-nu.vercel.app/"
+        />
+        <meta
+          property="og:image"
+          itemprop="image"
+          content="https://ik.imagekit.io/krs/krslogo_xvWTwoYCz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660033699873"
+        />
+        <meta property="og:type" content="website" />
+
+        <meta property="twitter:card" content="summary_large_image"></meta>
+        <meta
+          property="twitter:url"
+          content="https://twitter.com/services_enr"
+        ></meta>
+        <meta
+          property="twitter:title"
+          content="Online Shopping for Men & Women: The Da"
+        ></meta>
+      </Helmet>
       <BrowserRouter>
         <Provider store={store}>
           <Layout>

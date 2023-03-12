@@ -13,6 +13,7 @@ import StarIcon from "@mui/icons-material/Star";
 
 export default function Gender() {
   const [showGender, setGender] = useState();
+  const [loading, setLoading] = useState(true);
 
   const { gender } = useParams();
 
@@ -33,7 +34,10 @@ export default function Gender() {
       );
 
       const data = await res.json();
-      setGender(data);
+      if (data) {
+        setGender(data);
+        setLoading(false);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -69,53 +73,62 @@ export default function Gender() {
   };
 
   return (
-    <div>
-      <div className={GenCss.mDiv}>
-        <div className={GenCss.SelectDiv}>
-          <select
-            name="sort"
-            id=""
-            className={GenCss.selectTag}
-            onChange={changeSort}
-          >
-            <option value="feature">Featured</option>
-            <option value="low">Price - Low to High</option>
-            <option value="high">Price - High to Low</option>
-            <option value="ratingHightoLow">Best Rating</option>
-            <option value="new">Newest</option>
-            <option value="Popularity">Popularity</option>
-          </select>
-        </div>
-        {showGender ? (
-          <div className={GenCss.MapPDiv}>
-            {showGender.map((value, key) => {
-              return (
-                <div key={value._id} className={GenCss.MapMDiv}>
-                  <Link to={`/products/${value._id}`} className="LinkStyle">
-                    <div>
-                      <img
-                        src={value.imageSrc}
-                        alt={value.name}
-                        className={GenCss.ImgSrc}
-                      />
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <div className={GenCss.mDiv}>
+            <div className={GenCss.SelectDiv}>
+              <select
+                name="sort"
+                id=""
+                className={GenCss.selectTag}
+                onChange={changeSort}
+              >
+                <option value="feature">Featured</option>
+                <option value="low">Price - Low to High</option>
+                <option value="high">Price - High to Low</option>
+                <option value="ratingHightoLow">Best Rating</option>
+                <option value="new">Newest</option>
+                <option value="Popularity">Popularity</option>
+              </select>
+            </div>
+            {showGender ? (
+              <div className={GenCss.MapPDiv}>
+                {showGender.map((value, key) => {
+                  return (
+                    <div key={value._id} className={GenCss.MapMDiv}>
+                      <Link to={`/products/${value._id}`} className="LinkStyle">
+                        <div>
+                          <img
+                            src={value.imageSrc}
+                            alt={value.name}
+                            className={GenCss.ImgSrc}
+                          />
+                        </div>
+                        <div className={TSCss.DetailsDiv}>
+                          <p className={TSCss.Name}> {value.name} </p>
+                          <p className={TSCss.Rating}>
+                            <StarIcon
+                              fontSize="small"
+                              className={TSCss.StarIcon}
+                            />
+                            <span> {value.rating} </span>
+                          </p>
+                          <p className={TSCss.price}> ₹{value.price} </p>
+                        </div>
+                      </Link>
                     </div>
-                    <div className={TSCss.DetailsDiv}>
-                      <p className={TSCss.Name}> {value.name} </p>
-                      <p className={TSCss.Rating}>
-                        <StarIcon fontSize="small" className={TSCss.StarIcon} />
-                        <span> {value.rating} </span>
-                      </p>
-                      <p className={TSCss.price}> ₹{value.price} </p>
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
+                  );
+                })}
+              </div>
+            ) : (
+              ""
+            )}
           </div>
-        ) : (
-          ""
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 }

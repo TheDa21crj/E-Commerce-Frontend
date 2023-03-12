@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import PDCss from "./Css/ProductDetails.module.css";
+
+// Components
 import SizeChart from "../Components/Product/SizeChart";
+import Alert from "./../Components/Account/Alert";
+
+// Css
+import PDCss from "./Css/ProductDetails.module.css";
+import "./../Components/Product/CSS/ProductC.css";
+
+// Icons
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import "./../Components/Product/CSS/ProductC.css";
-import Alert from "./../Components/Account/Alert";
+
+// Loading
 import Loading from "./Loading";
 
 // redux

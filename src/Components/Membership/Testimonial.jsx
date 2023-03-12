@@ -1,8 +1,10 @@
 import React from "react";
-import TeCss from "./CSS/Testimonial.module.css";
 import Sliders from "react-slick";
+
+// Css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TeCss from "./CSS/Testimonial.module.css";
 
 export default function Testimonial() {
   var settingT = {

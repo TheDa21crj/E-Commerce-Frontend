@@ -1,4 +1,6 @@
 import React from "react";
+
+// Css
 import BenifitsCss from "./CSS/Benifits.module.css";
 
 export default function Benifits(props) {

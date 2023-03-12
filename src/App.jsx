@@ -52,7 +52,7 @@ function App() {
         <meta
           property="og:image"
           itemprop="image"
-          content="https://ik.imagekit.io/krs/krslogo_xvWTwoYCz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660033699873"
+          content="https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/640d7823317316351292beeb_Frame%201.png"
         />
         <meta property="og:type" content="website" />
 

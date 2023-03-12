@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+
+// Components
 import PriceCards from "./PriceCards";
+
+// Css
 import MemCss from "./CSS/Member.module.css";
 
 export default function Member() {

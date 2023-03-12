@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
+// Loading
+import Loading from "./Loading";
+
 // Css
 import GenCss from "./Css/Gender.module.css";
 import TSCss from "./../Components/Home/Css/TopSelling.module.css";
@@ -10,6 +13,7 @@ import StarIcon from "@mui/icons-material/Star";
 
 export default function MerchandiseLink() {
   const [showGender, setGender] = useState();
+  const [loading, setLoading] = useState(true);
 
   const { link } = useParams();
 
@@ -32,6 +36,7 @@ export default function MerchandiseLink() {
       if (data.errors) {
       } else {
         setGender(data);
+        setLoading(false);
       }
     } catch (error) {
       console.log(error);
@@ -42,36 +47,45 @@ export default function MerchandiseLink() {
   }, []);
 
   return (
-    <div>
-      {showGender ? (
-        <div className={GenCss.MapPDiv}>
-          {showGender.map((value, key) => {
-            return (
-              <div key={value._id} className={GenCss.MapMDiv}>
-                <Link to={`/products/${value._id}`} className="LinkStyle">
-                  <div>
-                    <img
-                      src={value.imageSrc}
-                      alt={value.name}
-                      className={GenCss.ImgSrc}
-                    />
-                  </div>
-                  <div className={TSCss.DetailsDiv}>
-                    <p className={TSCss.Name}> {value.name} </p>
-                    <p className={TSCss.Rating}>
-                      <StarIcon fontSize="small" className={TSCss.StarIcon} />
-                      <span> {value.rating} </span>
-                    </p>
-                    <p className={TSCss.price}> ₹{value.price} </p>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+    <>
+      {loading ? (
+        <Loading />
       ) : (
-        ""
+        <div>
+          {showGender ? (
+            <div className={GenCss.MapPDiv}>
+              {showGender.map((value, key) => {
+                return (
+                  <div key={value._id} className={GenCss.MapMDiv}>
+                    <Link to={`/products/${value._id}`} className="LinkStyle">
+                      <div>
+                        <img
+                          src={value.imageSrc}
+                          alt={value.name}
+                          className={GenCss.ImgSrc}
+                        />
+                      </div>
+                      <div className={TSCss.DetailsDiv}>
+                        <p className={TSCss.Name}> {value.name} </p>
+                        <p className={TSCss.Rating}>
+                          <StarIcon
+                            fontSize="small"
+                            className={TSCss.StarIcon}
+                          />
+                          <span> {value.rating} </span>
+                        </p>
+                        <p className={TSCss.price}> ₹{value.price} </p>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       )}
-    </div>
+    </>
   );
 }

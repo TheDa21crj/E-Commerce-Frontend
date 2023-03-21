@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TSCss from "./Css/TopSelling.module.css";
-import CatCss from "./Css/CATEGORIES.css";
+// import CatCss from "./Css/CATEGORIES.css";
 import data from "./JSON/data.json";
 
 export default function CATEGORIES() {

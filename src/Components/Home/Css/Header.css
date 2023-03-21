@@ -1,23 +1,28 @@
 .slick-prev {
-    transform: translate(170%, -50%) !important;
-    z-index: 1;
+  transform: translate(170%, -50%) !important;
+  z-index: 1;
 }
 
 .slick-next {
-    transform: translate(-300%, -50%) !important;
+  transform: translate(-300%, -50%) !important;
 }
 
 .slick-prev:before {
-    content: "\2190";
-    font-size: 2rem;
+  content: "\2190";
+  font-size: 2rem;
 }
 
 .slick-next:before {
-    content: "\2192";
-    font-size: 2rem;
+  content: "\2192";
+  font-size: 2rem;
 }
 
 .slick-prev:before:hover,
 .slick-next:before:hover {
-    color: gold !important;
+  color: gold !important;
+}
+
+.slick-slide img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }

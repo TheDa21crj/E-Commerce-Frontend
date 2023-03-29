@@ -1,4 +1,4 @@
-# E-Commerce-Frontend
+# E-Commerce-Frontend &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TheDa21crj/E-Commerce-Frontend/blob/main/LICENSE)
 
 Welcome to the e-commerce frontend repository made with Vite, React, Redux, and Material UI for icons. This frontend communicates with the backend API hosted at `https://coral-app-ogkbu.ondigitalocean.app/`. The frontend is hosted on Vercel, a cloud platform for static sites and serverless functions.
 
@@ -36,6 +36,6 @@ This will create a production build of the application in the `dist` directory, 
 
 Thank you for using our e-commerce frontend repository. If you have any questions or issues, please feel free to open an issue or pull request.
 
-## Author
+### License
 
-- [@TheDa21crj](https://github.com/TheDa21crj)
+fed-frontend is [MIT licensed](https://github.com/fed-tech/FED-React/blob/main/license).
